@@ -110,7 +110,7 @@ public class BaseController {
         List<String[][]> bodies = new ArrayList<>();
         dto.getIds().forEach(id->{
             try {
-                Pair<String[],String[][]> pair = fileService.readPreviewDataset(Framework.datasetIdMapping.get(id),dto.getRow());
+                Pair<String[],String[][]> pair = fileService.readPreviewDataset(Framework.datasetIdMapping.get(id),dto.getRows());
                 headers.add(pair.getLeft());
                 bodies.add(pair.getRight());
             } catch (IOException e) {
